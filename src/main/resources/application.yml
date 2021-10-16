@@ -1,0 +1,14 @@
+server:
+  port: 8990
+
+
+
+coap:
+  port: 8998
+  appId:  test
+  appKey: 123456
+
+
+
+qweather:
+  key: 9e54b1e3d00e4f36b813065e30b0eec7
