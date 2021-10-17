@@ -31,7 +31,7 @@ public class WeatherController {
         if(StringUtils.isEmpty(location)){
             return new HttpResultModel(405, "参数缺失");
         }
-        return weatherService.getWatherNow(Long.valueOf(location));
+        return weatherService.getWatherNow(location);
 
     }
 

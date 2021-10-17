@@ -16,5 +16,5 @@ public interface WeatherService {
      * @param location 城市编码
      * @return
      */
-    HttpResultModel getWatherNow(long location);
+    HttpResultModel getWatherNow(String location);
 }

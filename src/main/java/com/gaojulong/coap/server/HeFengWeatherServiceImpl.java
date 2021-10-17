@@ -28,10 +28,10 @@ public class HeFengWeatherServiceImpl implements WeatherService {
     private String key;
 
     @Override
-    public HttpResultModel getWatherNow(long location) {
+    public HttpResultModel getWatherNow(String location) {
 
         Map<String, String> params = new HashMap<>();
-        params.put("location", location + "");
+        params.put("location", location);
         params.put("key", key);
 
         try {
