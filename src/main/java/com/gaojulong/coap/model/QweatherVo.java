@@ -1,11 +1,14 @@
 package com.gaojulong.coap.model;
 
+import lombok.Data;
+
 /**
  * 描述:
  *
  * @author xiongsulong
  * @create 2021-10-17 03:27
  */
+@Data
 public class QweatherVo {
 
     private String temp;
@@ -19,43 +22,14 @@ public class QweatherVo {
     private String time;
 
 
-    public String getTemp() {
-        return temp;
-    }
+    private String fxDate;
 
-    public void setTemp(String temp) {
-        this.temp = temp;
-    }
+    private String tempMin;
 
-    public String getHumidity() {
-        return humidity;
-    }
+    private String tempMax;
 
-    public void setHumidity(String humidity) {
-        this.humidity = humidity;
-    }
+    private String iconDay;
 
-    public String getIcon() {
-        return icon;
-    }
+    private String textDay;
 
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
-    }
 }

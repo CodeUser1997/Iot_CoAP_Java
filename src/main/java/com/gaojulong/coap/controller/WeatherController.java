@@ -35,4 +35,19 @@ public class WeatherController {
 
     }
 
+    @CoAPGetMapping("/ntp")
+    public HttpResultModel ntp(CoapExchange exchange){
+        return weatherService.ntp();
+    }
+
+
+    @CoAPGetMapping("/3d")
+    public HttpResultModel threeDays(CoapExchange exchange){
+        String location = exchange.getQueryParameter("location");
+        if(StringUtils.isEmpty(location)){
+            return new HttpResultModel(405, "参数缺失");
+        }
+        return weatherService.threeDays(location);
+    }
+
 }

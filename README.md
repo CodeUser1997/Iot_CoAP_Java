@@ -49,9 +49,11 @@ coap://api.gaojulong.com/ntp
 
 ~~~json
 {
-    "t":"1634894633478",
-    "code":200,
-    "time_format":"2021-10-22 17:23:53"
+    "code": 200,
+    "data": {
+        "t":"1634894633478",
+        "time_format":"2021-10-22 17:23:53"
+    }
 }
 ~~~
 
@@ -68,10 +70,12 @@ coap://api.gaojulong.com/weather/now?location=117.282488,31.775297&key=9e54b1e3d
 ~~~json
 {
     "code":"200",
-    "temp":"16",
-    "icon":"104",
-    "text":"Overcast",
-    "humidity":"63"
+    "data":{
+        "temp":"16",
+        "icon":"104",
+        "text":"Overcast",
+        "humidity":"63"
+    }
 }
 ~~~
 

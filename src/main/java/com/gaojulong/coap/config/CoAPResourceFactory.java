@@ -109,8 +109,11 @@ public class CoAPResourceFactory {
                 for (int i = 0; i < nodeNames.length; i++) {
                     //头结点
                     if(parentNode == null){
-                        parentNode = new CoapResource(nodeNames[i]);
-                        headNodeAll.put(nodeNames[i], parentNode);
+                        parentNode = headNodeAll.get(nodeNames[i]);
+                        if(parentNode == null){
+                            parentNode = new CoapResource(nodeNames[i]);
+                            headNodeAll.put(nodeNames[i], parentNode);
+                        }
                     }else {
                         //当前节点是否是上一个的子节点
                         Resource child = parentNode.getChild(nodeNames[i]);

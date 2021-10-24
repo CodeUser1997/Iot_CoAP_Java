@@ -17,4 +17,17 @@ public interface WeatherService {
      * @return
      */
     HttpResultModel getWatherNow(String location);
+
+    /**
+     * 获取当前时间
+     * @return
+     */
+    HttpResultModel ntp();
+
+    /**
+     * 3天天气
+     * @param location
+     * @return
+     */
+    HttpResultModel threeDays(String location);
 }
