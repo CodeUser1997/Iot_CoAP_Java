@@ -24,8 +24,8 @@ public class WeatherController {
     @Resource(name = "heFengWeatherService")
     private WeatherService weatherService;
 
-    @CoAPGetMapping("/getWeather")
-    public HttpResultModel getWeather(CoapExchange exchange){
+    @CoAPGetMapping("/now")
+    public HttpResultModel now(CoapExchange exchange){
 
         String location = exchange.getQueryParameter("location");
         if(StringUtils.isEmpty(location)){
